@@ -19,23 +19,46 @@ sudo make && ./doom-nukem
 
 ## **What I have done on this project ?**
 
-**MAP**: The parsing wasn't that hard, even if the map is a really big deal, I questioned myself about getting all the informations needed, wall size, floor, ceiling texture, sprite, actions etc... in the game the map can't be over 50 * 50 but I've tryed with 1000 * 1000 and it's working.
-IE: 00620120
+***Map editor***
+When I first arrived in the team, I was assigned to do the map editor. I tried to make it as practical to use as possible, despite my limited knowledge in UX/UI, and the fact that I had to do everything from scratch. The result isn't anything spectacular but I'm pretty happy with it.
+This includes:
+ - Map editing with basic features (line selection with shift, block selection with ctrl, map displacement with middle mouse button, eraser, ...).
+ - Block placement with specific presets (Chose what features you want to add at a specific coordinate.
+ - Block preset creation and editing for easier editing.
+ - Prompts for preset names/map name
 
-**Engine**: Based on raycasting I've try to do my best to add what some call 'impossible with raycast', the movements including jumping, crouching, flying, diving, dying, different wall height. This was very challenging as you need to try everything in order to complete correctly some movements like the crouch.
-(Thanks to nboute for the visual fix on the wall height)
+**Refactoring**
+I arrived on this project about one month into it's creation where it only had a simple menu and the engine was pretty barebones (Raycasting with added features of looking up and down).
+After making the editor engine, I first worked on refactoring the code for the menu which was too slow and greatly impeded our ability to test the engine, so I hastly improved it in order to have a solid base to work on and to start adding new functionalities.
 
-**Game Design / Level Design**: I wanted this project to be like I could imagine it, I wrote the story, I determined what will be in the game, how we would have play it, how everything would be, from level 1 to the final boss, including the arcade mode. I want the player to be forced to seek into the entire map to go to the next level. I wanted every level to look totally different, to sound totally different, which is why we have 3 different atmospheres and an arena to beat the boss.
-I also wanted an Arcade mode like the old doom, just for fun you know!
+**Engine**
+I worked together with dlartigu mostly to help fix a few visual bugs with the engine at first, in order to get more comfortable with the codebase, then proceded to add many features:
+- ***Floor/Roof***
+  I worked on adding the floor/roofs together with dlartigu so they could work properly with the looking up/down mechanic.
+- ***Skybox***
+  Skybox with varying width/rotation speed, so we could work with multiple skyboxes to add a better distance effects. Though this wasn't implemented in the end and     only the simple skybox feature remained.
 
-**Visual**: I've made most of the visual that you can see in this game (except for the sprite, thanks for the doom sprite database), if there is a visual that isn't from me, then I've reworked it on Photoshop/Gimp. I've could take textures from a database, but the game wouldn't match my vision.
+- ***Windows***
+   Added see-through walls or partially see-through walls.
 
-**Audio**: In order to match my vision of this game, I've searched for days to get the perfect matching sound design, all sound design are from royalty free database.
+- ***Sprites***
+  The sprite feature in it's entirety, using standard methods for showing sprites in a raycasting algorithm, just adapting them to the improved algorithm we had.
+  This includes Items, Enemies and Transparent Walls
+- ***Wall Sprites***
+  Namely for the bullet impacts when shooting on different walls, done with a buffer of the last n shots.
 
-**Team Management**: At the begining we were 2, then 3, then 4. It was tough, as in a huge project like this you need someone to lead if you want the project to be finished someday. You need, to call them, organize meetings and put some pressure on your team mates.
+- ***Sprites Actions/Pathfinding/Sounds***
+  I learned how to use the fmod library in this project, and used it to add audio to monsters/music and the gunshots
+  I created a very basic AI for the mobs so they patrolled back and forth, and went attacking the player if he was close enough.
 
-**Project Organization**: This part matches the previous one, because you can't lead a project without being very organized. You need to know what needs to be done first in order to achieve the next goal. Which is why we could work all together without interfering in others parts.
+- ***Management***
+  I also worked on helping struggling group members in implementing many features like the HUD or visual effects like rain, and directing them altogether to work on 
+  the different features we needed to add.
 
+- ***Parsing***
+  I also added many parsing features for configuration files when I had time to do so, to streamline the process of adding new sounds/textures per example
+***Conclusion***
+  This was a pretty hectic project in the middle of the covid crisis, and it lasted much longer than it should have (I started working on it middle august and it     ended late november, but I learned a lot during this time, from the libraries we used (SDL2/SDL2_TTF for graphics, fmod for audio), in programming itself, and in project planning/management. Whereas I arrived to support the project, I finally ended up managing most of the features, along with dlartigu, but during the end he mostly contributed to the artistic part of the project (textures, sound design, game design)
 ------
 
 ## **How to play ?**
