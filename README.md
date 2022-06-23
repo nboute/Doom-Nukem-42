@@ -33,31 +33,31 @@ After making the editor engine, I first worked on refactoring the code for the m
 
 **Engine**
 I worked together with dlartigu mostly to help fix a few visual bugs with the engine at first, in order to get more comfortable with the codebase, then proceded to add many features:
-- ***Floor/Roof***
+- ***Floor/Roof***:
   I worked on adding the floor/roofs together with dlartigu so they could work properly with the looking up/down mechanic.
-- ***Skybox***
+- ***Skybox***:
   Skybox with varying width/rotation speed, so we could work with multiple skyboxes to add a better distance effects. Though this wasn't implemented in the end and     only the simple skybox feature remained.
 
-- ***Windows***
+- ***Windows***:
    Added see-through walls or partially see-through walls.
 
-- ***Sprites***
+- ***Sprites***:
   The sprite feature in it's entirety, using standard methods for showing sprites in a raycasting algorithm, just adapting them to the improved algorithm we had.
   This includes Items, Enemies and Transparent Walls
-- ***Wall Sprites***
+- ***Wall Sprites***:
   Namely for the bullet impacts when shooting on different walls, done with a buffer of the last n shots.
 
-- ***Sprites Actions/Pathfinding/Sounds***
+- ***Sprites Actions/Pathfinding/Sounds***:
   I learned how to use the fmod library in this project, and used it to add audio to monsters/music and the gunshots
   I created a very basic AI for the mobs so they patrolled back and forth, and went attacking the player if he was close enough.
 
-- ***Management***
+- ***Management***:
   I also worked on helping struggling group members in implementing many features like the HUD or visual effects like rain, and directing them altogether to work on 
   the different features we needed to add.
 
-- ***Parsing***
+- ***Parsing***:
   I also added many parsing features for configuration files when I had time to do so, to streamline the process of adding new sounds/textures per example
-***Conclusion***
+***Conclusion***:
   This was a pretty hectic project in the middle of the covid crisis, and it lasted much longer than it should have (I started working on it middle august and it     ended late november, but I learned a lot during this time, from the libraries we used (SDL2/SDL2_TTF for graphics, fmod for audio), in programming itself, and in project planning/management. Whereas I arrived to support the project, I finally ended up managing most of the features, along with dlartigu, but during the end he mostly contributed to the artistic part of the project (textures, sound design, game design)
 ------
 
