@@ -20,6 +20,7 @@ sudo make && ./doom-nukem
 ## **What I have done on this project ?**
 
 ***Map editor***
+
 When I first arrived in the team, I was assigned to do the map editor. I tried to make it as practical to use as possible, despite my limited knowledge in UX/UI, and the fact that I had to do everything from scratch. The result isn't anything spectacular but I'm pretty happy with it.
 This includes:
  - Map editing with basic features (line selection with shift, block selection with ctrl, map displacement with middle mouse button, eraser, ...).
@@ -28,13 +29,15 @@ This includes:
  - Prompts for preset names/map name
 
 **Refactoring**
+
 I arrived on this project about one month into it's creation where it only had a simple menu and the engine was pretty barebones (Raycasting with added features of looking up and down).
 After making the editor engine, I first worked on refactoring the code for the menu which was too slow and greatly impeded our ability to test the engine, so I hastly improved it in order to have a solid base to work on and to start adding new functionalities.
 
 **Engine**
+
 I worked together with dlartigu mostly to help fix a few visual bugs with the engine at first, in order to get more comfortable with the codebase, then proceded to add many features:
 - ***Floor/Roof***:
-  I worked on adding the floor/roofs together with dlartigu so they could work properly with the looking up/down mechanic.
+  I added the floor/roofs texturing feature together with dlartigu so they could work properly with the looking up/down mechanic.
 - ***Skybox***:
   Skybox with varying width/rotation speed, so we could work with multiple skyboxes to add a better distance effects. Though this wasn't implemented in the end and     only the simple skybox feature remained.
 
@@ -85,13 +88,9 @@ If you have a very powerful computer you can try to run the game in 1080p (or hi
   ![Low vs High](https://github.com/dlartigu/Doom-Nukem-42/blob/main/gif/lowvshigh.png)
   
 
-- Main Menu
-
-  ![Main Menu](https://github.com/dlartigu/Doom-Nukem-42/blob/main/gif/Menu.gif)
-
 - Basics on level 1
 
-  ![Basics](https://github.com/dlartigu/Doom-Nukem-42/blob/main/gif/level1/1.gif)
+  ![Basics](https://github.com/dlartigu/Doom-Nukem-42/raw/main/gif/level1/1.gif)
   ![Press F to fly](https://github.com/dlartigu/Doom-Nukem-42/blob/main/gif/level1/2.gif)
 
 - It is forbidden to get off before the train has come to a complete stop
